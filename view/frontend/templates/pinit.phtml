@@ -1,0 +1,22 @@
+<?php
+/**
+ * @copyright Copyright (c) 2018 www.innovadeltech.com
+ */
+?>
+<?php
+$enableModule = $block->_scopeConfig->getValue('socialshare/general/enabled', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+$enablePinit = $block->_scopeConfig->getValue('socialshare/pinitsharing/enable_pinit', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+?>
+<div class="share">
+    <?php
+    if ($enableModule == 1) {
+        if ($enablePinit == 1) {
+            ?>
+            <div class="pinit_button">
+                <a data-pin-do="buttonPin" href="https://www.pinterest.com/pin/create/button/?url=<?php echo urlencode($this->_product->getProductUrl()); ?>" data-pin-count="beside"></a>          </div>
+            <script type="text/javascript" async defer src="//assets.pinterest.com/js/pinit.js"></script>
+
+            <?php
+        }
+    }
+    ?>   </div>

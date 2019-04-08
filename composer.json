@@ -1,0 +1,40 @@
+{
+  "name": "innovadeltech/social-share",
+  "description": "Social Share extension for Magento 2 design to share products on social media.",  
+  "require": {
+    "php": "^7.0.6"
+  },
+  "type": "magento2-module",
+  "version": "0.2.0",
+  "license": "GPL-3.0-or-later",  
+  "authors": [
+    {
+      "name": "Innovadeltech Team",
+      "email": "support@innovadeltech.com",
+      "homepage": "http://www.innovadeltech.com",
+      "role": "Technical Support"
+    }
+  ],
+  "keywords": [
+    "magento 2",
+    "social share",
+    "magento 2 social share",
+    "facebook social share",
+    "google plus social share",
+    "instagram social share",
+    "linkedIn social share",    
+    "twitter social share",    
+	"innovadeltech social share",    
+    "innovadeltech"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Innovadeltech\\Socialshare\\": ""
+    }
+  }
+  
+}
+

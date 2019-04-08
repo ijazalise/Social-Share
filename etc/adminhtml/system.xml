@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!--
+/**
+* @copyright Copyright (c) 2016 www.innovadeltech.com
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="innovadeltech" translate="label" sortOrder="1">
+            <label>Innovadeltech Extensions</label>
+        </tab>
+        <section id="socialshare" translate="label" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Social Share</label>
+            <tab>innovadeltech</tab>
+            <resource>Innovadeltech_Socialshare::system_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="facebook" translate="label" type="text" sortOrder="2" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Facebook Share</label>
+                <field id="enable_facebook" translate="label" type="select" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Facebook</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="fb_id" translate="label" type="text" sortOrder="2" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Facebook ID</label>
+                    <comment>Leave it blank if you don't have any Facebook ID</comment>
+                </field>
+                <field id="display_onlylike" translate="label" type="select" sortOrder="3" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display Like</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="display_share" translate="label" type="select" sortOrder="3" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Display Share</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="googleplus" translate="label" type="text" sortOrder="3" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Google Share</label>
+                <field id="enable_google_plus" translate="label" type="select" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Google +1</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="twitter" translate="label" type="text" sortOrder="4" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Twitter Share</label>
+                <field id="enable_twitter" translate="label" type="select" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Twitter</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="pinitsharing" translate="label" type="text" sortOrder="5" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Pin It Share</label>
+                <field id="enable_pinit" translate="label" type="select" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Pin It</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="linkedinsharing" translate="label" type="text" sortOrder="5" showInDefault="1" showInStore="1" showInWebsite="1">
+                <label>Linked In Share</label>
+                <field id="enable_linkedin" translate="label" type="select" sortOrder="1" showInDefault="1" showInStore="1" showInWebsite="1">
+                    <label>Enable Linked In</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

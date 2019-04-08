@@ -1,0 +1,41 @@
+<?php
+/**
+ * @copyright Copyright (c) 2018 www.innovadeltech.com
+ */
+?>
+<?php
+$enableModule = $block->_scopeConfig->getValue('socialshare/general/enabled', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+$enableFacebook = $block->_scopeConfig->getValue('socialshare/facebook/enable_facebook', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+$enableShare = $block->_scopeConfig->getValue('socialshare/facebook/display_share', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+?>
+<div class="share">
+    <?php
+    if ($enableModule == 1) {
+        if ($enableFacebook == 1) {
+            ?>
+
+            <div id="fb-root"></div>
+            <script>(function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id))
+                        return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.1';
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+
+            <?php
+            if ($enableShare == 1) {
+                ?>
+                <div class="fb-share-button" 
+                     <div class="fb-share-button" data-href="<?php echo $this->_product->getProductUrl(); ?>" data-layout="button_count" data-size="small" data-mobile-iframe="true">
+                        <a target="_blank" href="<?php echo $this->_product->getProductUrl(); ?>"
+                           class="fb-xfbml-parse-ignore">Share</a></div>
+
+
+                    <?php
+                }
+            }
+        }
+        ?></div>

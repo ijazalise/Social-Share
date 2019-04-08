@@ -1,0 +1,23 @@
+<?php
+/**
+ * @copyright Copyright (c) 2018 www.innovadeltech.com
+ */
+?>
+<?php
+$enableModule = $block->_scopeConfig->getValue('socialshare/general/enabled', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+$enableLinkedin = $block->_scopeConfig->getValue('socialshare/linkedinsharing/enable_linkedin', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+?>
+
+<div class="share">
+    <?php
+    if ($enableModule == 1) {
+        if ($enableLinkedin == 1) {
+            ?>
+            <div class="linkedin_button"><script src="//platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
+                <script type="IN/Share" data-url="<?php echo urlencode($this->_product->getProductUrl()); ?>"></script></div>
+
+            <?php
+        }
+    }
+    ?> 
+</div>

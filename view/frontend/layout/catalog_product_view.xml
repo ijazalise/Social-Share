@@ -1,0 +1,20 @@
+<!--
+/**
+* @copyright Copyright (c) 2018 www.innovadeltech.com
+*/
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Innovadeltech_Socialshare::css/socialshare.css"/>
+    </head>
+    <body>
+        <referenceContainer name="page.main.title">
+            <block class="Innovadeltech\Socialshare\Block\SocialShare" name="facebookshare" template="Innovadeltech_Socialshare::facebook.phtml" />
+            <block class="Innovadeltech\Socialshare\Block\SocialShare" name="share"         template="Innovadeltech_Socialshare::share.phtml" />
+            <block class="Innovadeltech\Socialshare\Block\SocialShare" name="gplusshare"    template="Innovadeltech_Socialshare::gplus.phtml" />
+            <block class="Innovadeltech\Socialshare\Block\SocialShare" name="linkedinshare" template="Innovadeltech_Socialshare::linkdin.phtml" />
+            <block class="Innovadeltech\Socialshare\Block\SocialShare" name="pinitshare"    template="Innovadeltech_Socialshare::pinit.phtml" />
+            <block class="Innovadeltech\Socialshare\Block\SocialShare" name="tweetshare"    template="Innovadeltech_Socialshare::tweet.phtml" />
+        </referenceContainer>
+    </body>
+</page>

@@ -1,0 +1,22 @@
+<?php
+/**
+ * @copyright Copyright (c) 2018 www.innovadeltech.com
+ */
+?>
+
+<?php
+$enableModule = $block->_scopeConfig->getValue('socialshare/general/enabled', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+$enableTwitter = $block->_scopeConfig->getValue('socialshare/twitter/enable_twitter', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+?>
+
+<div class="share">
+    <?php
+    if ($enableModule == 1) {
+        if ($enableTwitter == 1) {
+            ?>
+            <a href="<?php echo urlencode($this->_product->getProductUrl()); ?>" class="twitter-share-button" data-show-count="true">Tweet</a>
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <?php
+        }
+    }
+    ?> </div>

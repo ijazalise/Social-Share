@@ -2,7 +2,7 @@
   "name": "innovadeltech/social-share",
   "description": "Social Share extension for Magento 2 design to share products on social media.",  
   "require": {
-    "php": "^7.0.6"
+    "php": "^5.5.0"
   },
   "type": "magento2-module",
   "version": "1.0.0",
